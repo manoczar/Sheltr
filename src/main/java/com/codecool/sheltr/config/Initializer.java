@@ -19,7 +19,7 @@ public class Initializer {
         return args -> {
 
             Shelter doggo = Shelter.builder()
-                    .title("Doggo shelter")
+                    .name("Doggo shelter")
                     .shortDescription("We are a small dog shelter in Budapest")
                     .description("Doggo shelter is a small animal shelter based in Budapest. Currently we can only work with dogs due to our funds. We are easy to reach within the city and our team will more than happy to hel our future customers")
                     .organisation("Doggo kft.")
@@ -27,7 +27,7 @@ public class Initializer {
                     .build();
 
             Shelter animall = Shelter.builder()
-                    .title("AnimALL")
+                    .name("AnimALL")
                     .shortDescription("We are the biggest animal shelter in Hungary, based in Jászfelsőszentgyörgy")
                     .description("At AnimALL as the name suggests, we accept every animal in our shelter. And you can adopt them as well. We currently have some pigs, hedgehogs, dogs, cats, mallards, an elephant and a tiger")
                     .organisation("AnimALL")
@@ -35,17 +35,26 @@ public class Initializer {
                     .build();
 
             Shelter birdy = Shelter.builder()
-                    .title("Birdy")
+                    .name("Birdy")
                     .shortDescription("Birdy is the most famous bird shelter in Hungary")
                     .description("We constantly searching for abandoned birds in Hungary, and we are open for adoptions as well. Please visit us at Budapest for the details and browse between our birds")
                     .organisation("Birdy")
                     .city("Budapest")
                     .build();
 
+            Shelter kapos = Shelter.builder()
+                    .name("Kapos Shelter")
+                    .shortDescription("Kaposvár's one and only animal shelter")
+                    .description("Were based in Kaposvár. We work in all Somogy country, looking for abandoned animals. You can find us for adoption and also inform us abandoned animals around your area")
+                    .organisation("Kaposvár városa")
+                    .city("Kaposvár")
+                    .build();
+
 
             shelterStorage.add(doggo);
             shelterStorage.add(animall);
             shelterStorage.add(birdy);
+            shelterStorage.add(kapos);
         };
     }
 

@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class ShelterStorage {
@@ -27,14 +26,15 @@ public class ShelterStorage {
         return shelterRepository.findAll();
     }
 
-    public Stream<Shelter> getBy(String title) {
-        List<Shelter> data = shelterRepository.findAll();
-        return data.stream().filter(p -> p.getTitle().equals(title));
-    }
-
     public String getCity(Integer id) {
         Shelter shelter = shelterRepository.findById(id).orElse(null);
         return shelter.getCity();
+    }
+
+    public void remove(Integer id) {
+        Shelter shelter = shelterRepository.findById(id).orElse(null);
+        shelterRepository.delete(shelter);
+
     }
 
 }

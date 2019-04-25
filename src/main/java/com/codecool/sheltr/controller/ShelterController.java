@@ -31,6 +31,12 @@ public class ShelterController {
         return shelter;
     }
 
+    @DeleteMapping(value = "/shelter/{id}")
+    public String deleteShelterById(@PathVariable("id") Integer id) {
+        shelterStorage.remove(id);
+        return "success";
+    }
+
 
 
 }

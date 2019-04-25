@@ -22,7 +22,7 @@ public class Shelter {
     protected Integer id;
 
     @Column(nullable = false)
-    protected String title;
+    protected String name;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     protected String shortDescription;
