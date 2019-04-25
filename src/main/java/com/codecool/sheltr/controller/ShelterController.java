@@ -26,10 +26,11 @@ public class ShelterController {
     }
 
     @GetMapping(value = "/shelters/{id}")
-    public String findById(@PathVariable("id") Integer id) {
-        return shelterStorage.find(id).getTitle();
-
+    public Shelter findById(@PathVariable("id") Integer id) {
+        Shelter shelter = shelterStorage.find(id);
+        return shelter;
     }
+
 
 
 }

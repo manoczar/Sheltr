@@ -32,4 +32,9 @@ public class ShelterStorage {
         return data.stream().filter(p -> p.getTitle().equals(title));
     }
 
+    public String getCity(Integer id) {
+        Shelter shelter = shelterRepository.findById(id).orElse(null);
+        return shelter.getCity();
+    }
+
 }

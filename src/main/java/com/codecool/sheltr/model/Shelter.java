@@ -33,6 +33,11 @@ public class Shelter {
     @Column(nullable = false)
     protected String organisation;
 
+    @Column(nullable = false)
+    protected String city;
+
+
+
 
 
 
